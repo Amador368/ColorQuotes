@@ -2,10 +2,14 @@ package me.asantiago.android.colorquotes;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
+
+    public static final String TAG = MainActivity.class.getSimpleName();
 
     private TextView citaTextView;
     private TextView autorTextView;
@@ -19,5 +23,12 @@ public class MainActivity extends Activity {
         citaTextView = (TextView) findViewById(R.id.citaTextView);
         autorTextView = (TextView) findViewById(R.id.autorTextView);
         nuevaFraseButton = (Button) findViewById(R.id.nuevaFraseButton);
+
+        nuevaFraseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG,"Touching button");
+            }
+        });
     }
 }
