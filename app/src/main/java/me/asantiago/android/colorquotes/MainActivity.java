@@ -24,11 +24,16 @@ public class MainActivity extends Activity {
         autorTextView = (TextView) findViewById(R.id.autorTextView);
         nuevaFraseButton = (Button) findViewById(R.id.nuevaFraseButton);
 
-        nuevaFraseButton.setOnClickListener(new View.OnClickListener() {
+        /*nuevaFraseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d(TAG,"Touching button");
             }
-        });
+        });*/
     }
+
+    public void newQuote(View view){
+        Log.d(TAG,"Upps Touching");
+    }
+
 }
