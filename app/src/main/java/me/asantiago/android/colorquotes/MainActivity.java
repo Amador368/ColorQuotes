@@ -2,13 +2,9 @@ package me.asantiago.android.colorquotes;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
-import java.util.Random;
 
 public class MainActivity extends Activity {
 
@@ -50,33 +46,18 @@ public class MainActivity extends Activity {
         autors[4] = "Irving Berlin";
         quotes[4] = "El sabio no dice lo que sabe, y el necio no sabe lo que dice.";
 
-
-        /*nuevaFraseButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d(TAG,"Touching button");
-            }
-        });*/
     }
 
     public void newQuote(View view){
 
-        int randomGenerated = generateRandomNumber(quotes.length);
+        int randomGenerated = Utils.generateRandomNumber(quotes.length);
         String cita = quotes[randomGenerated];
         String autor = autors[randomGenerated];
 
         citaTextView.setText(cita);
         autorTextView.setText(autor);
-        Log.d(TAG,cita);
-        Log.d(TAG,autor);
-    }
-
-    private int generateRandomNumber(int max){
-        Random random = new Random();
-        random.setSeed(System.currentTimeMillis());
-
-        int randomNumber = random.nextInt(max);
-        return randomNumber;
+        //Log.d(TAG,cita);
+        //Log.d(TAG,autor);
     }
 
 }
