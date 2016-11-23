@@ -36,6 +36,7 @@ public class MainActivity extends Activity {
     autors[4] = "Irving Berlin";
     quotes[4] = "El sabio no dice lo que sabe, y el necio no sabe lo que dice.";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +56,12 @@ public class MainActivity extends Activity {
 
     public void newQuote(View view){
 
+        int randomGenerated = generateRandomNumber(quotes.length);
+        String cita = quotes[randomGenerated];
+        String autor = autors[randomGenerated];
+
+        citaTextView.setText(cita);
+        autorTextView.setText(autor);
     }
 
     private int generateRandomNumber(int max){
