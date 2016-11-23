@@ -7,7 +7,7 @@ import java.util.Random;
  */
 
 public class Utils {
-
+    //static
     public static int generateRandomNumber(int max){
         Random random = new Random();
         random.setSeed(System.currentTimeMillis());

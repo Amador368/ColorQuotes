@@ -56,8 +56,6 @@ public class MainActivity extends Activity {
 
         citaTextView.setText(cita);
         autorTextView.setText(autor);
-        //Log.d(TAG,cita);
-        //Log.d(TAG,autor);
     }
 
 }
