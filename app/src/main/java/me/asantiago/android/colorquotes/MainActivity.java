@@ -31,7 +31,10 @@ public class MainActivity extends Activity {
         QuotesGenerator quotesGenerator = new QuotesGenerator();
         Cita cita = quotesGenerator.obtainRandomQuote();
         citaTextView.setText(cita.getText());
+        citaTextView.setTextColor(cita.getColor());
         autorTextView.setText(cita.getAutor());
+        autorTextView.setTextColor(cita.getColor());
+        nuevaFraseButton.setBackgroundColor(cita.getColor());
     }
 
 }

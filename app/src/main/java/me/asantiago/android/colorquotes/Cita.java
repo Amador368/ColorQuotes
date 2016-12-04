@@ -8,6 +8,16 @@ public class Cita {
 
     private String text;
     private String autor;
+    private int color;
+
+    public int getColor() {
+        return color;
+    }
+
+    public void setColor(int color) {
+        this.color = color;
+    }
+
 
     public String getText() {
         return text;

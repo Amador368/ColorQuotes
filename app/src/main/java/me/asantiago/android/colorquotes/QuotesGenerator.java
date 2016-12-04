@@ -1,5 +1,7 @@
 package me.asantiago.android.colorquotes;
 
+import android.graphics.Color;
+
 /**
  * Created by asantiago on 04/12/16.
  */
@@ -7,6 +9,7 @@ package me.asantiago.android.colorquotes;
 public class QuotesGenerator {
 
     private Cita[] quotes;
+    private int[] colorsArray = {Color.CYAN,Color.RED,Color.BLACK,Color.GRAY,Color.YELLOW, Color.GREEN,Color.MAGENTA};
 
     public QuotesGenerator(){
 
@@ -36,6 +39,10 @@ public class QuotesGenerator {
 
     public Cita obtainRandomQuote(){
         int randomGenerated = Utils.generateRandomNumber(quotes.length);
+        int rancomColorGenerated = Utils.generateRandomNumber(quotes.length);
+        int color = colorsArray[rancomColorGenerated];
+        Cita cita = quotes[randomGenerated];
+        cita.setColor(color);
         return quotes[randomGenerated];
     }
 
