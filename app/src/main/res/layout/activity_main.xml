@@ -9,7 +9,14 @@
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:paddingTop="0dp"
-    tools:context="me.asantiago.android.colorquotes.MainActivity">
+    tools:context="me.asantiago.android.colorquotes.MainActivity"
+    android:layout_margin="0dp"
+    android:layout_marginBottom="0dp"
+    android:layout_marginEnd="0dp"
+    android:layout_marginTop="0dp"
+    android:layout_marginStart="0dp"
+    android:layout_marginRight="0dp"
+    android:layout_marginLeft="0dp">
 
     <TextView
         android:text="Esteo es una frase"
@@ -47,19 +54,15 @@
 
     <Button
         android:text="Nueva Cita"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:id="@+id/nuevaFraseButton"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="0dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
         android:fontFamily="sans-serif"
         android:textSize="30sp"
-        android:onClick="newQuote" />
+        android:onClick="newQuote"
+        android:layout_margin="0dp" />
 
 </android.support.constraint.ConstraintLayout>
