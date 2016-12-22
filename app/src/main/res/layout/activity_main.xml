@@ -65,6 +65,7 @@
         android:onClick="newQuote"
         android:layout_margin="0dp"
         android:textColor="#ffffff"
+        android:background="@color/colorPrimary"
         android:textStyle="bold"  />
 
 </android.support.constraint.ConstraintLayout>
